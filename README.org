@@ -1,0 +1,42 @@
+#+TITLE: treemacs-devicons
+#+AUTHOR: Hongyu Ding
+
+A treemacs theme inspired by vim-devicons. Can be used inside GUI or terminal.
+
+* Prerequisite
+You need a Nerd Font installed, and set your terminal font (or GUI default font) as a Nerd Font.
+
+* Installation
+Currently this is github only so please use a package manager that supports github repo.
+#+BEGIN_SRC elisp
+  (use-package treemacs-devicons
+    :straight (treemacs-devicons
+               :type git :host github :repo "rainstormstudio/treemacs-devicons")
+    :config
+    (treemacs-load-theme "devicons"))
+#+END_SRC
+
+You can also download the ~treemacs-devicons.el~ file and load it to the path, then simply
+#+BEGIN_SRC elisp
+  (require 'treemacs-devicons)
+  (treemacs-load-theme "devicons")
+#+END_SRC
+
+* Use ~treemacs-devicons~ with ~treemacs-icons-dired~
+Go to ~treemacs-icons-dired.el~ and comment out ~(display-graphic-p)~ inside the function ~treemacs-icons-dired--display()~
+#+BEGIN_SRC elisp
+  (defun treemacs-icons-dired--display ()
+    "Display the icons of files in a Dired buffer."
+    (when (and ;;(display-graphic-p)
+           (not treemacs-icons-dired-displayed)
+           dired-subdir-alist)
+      (setq-local treemacs-icons-dired-displayed t)
+      (setq-local treemacs-icons (treemacs-theme->gui-icons treemacs--current-theme))
+      (pcase-dolist (`(,path . ,pos) dired-subdir-alist)
+        (treemacs-icons-dired--display-icons-for-subdir path pos))))
+#+END_SRC
+
+* TODO roadmap [1/3]
++ [X] properly show all icons in treemacs
++ [ ] add faces for the icons (inherit icon colors from vim-devicons)
++ [ ] automatically use Nerd Font in GUI (similar to how ~fira-code-mode~ handles it)
