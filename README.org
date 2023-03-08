@@ -3,6 +3,8 @@
 
 A treemacs theme inspired by vim-devicons. Can be used inside GUI or terminal.
 
+[[file:screenshots/demo.png]]
+
 * Prerequisite
 You need a Nerd Font installed, and set your terminal font (or GUI default font) as a Nerd Font.
 
