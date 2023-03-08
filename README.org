@@ -3,7 +3,11 @@
 
 A treemacs theme inspired by [[https://github.com/ryanoasis/vim-devicons][vim-devicons]] and [[https://github.com/nvim-tree/nvim-web-devicons][nvim-web-devicons]]. It can be used inside GUI or terminal.
 
+In GUI:
 [[file:screenshots/demo.png]]
+
+In terminal:
+[[file:screenshots/demo-terminal.png]]
 
 * Prerequisite
 You need a Nerd Font installed, and set your terminal font (or GUI default font) as a Nerd Font.
