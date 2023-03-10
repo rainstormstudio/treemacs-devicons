@@ -10,7 +10,7 @@ In terminal:
 [[file:screenshots/demo-terminal.png]]
 
 * Prerequisite
-You need a Nerd Font installed, and set your terminal font (or GUI default font) as a Nerd Font.
+You need a Nerd Font installed, and set your terminal font (or GUI default font) as a Nerd Font. Currently the default Nerd Font for GUI is set to "FiraCode Nerd Font".
 
 * Installation
 Currently this is github only so please use a package manager that supports github repo.
@@ -46,7 +46,7 @@ Go to ~treemacs-icons-dired.el~ and comment out ~(display-graphic-p)~ inside the
         (treemacs-icons-dired--display-icons-for-subdir path pos))))
 #+END_SRC
 
-* TODO roadmap [2/3]
+* TODO roadmap [3/3]
 + [X] properly show all icons in treemacs
 + [X] add faces for the icons (inherit icon colors from vim-devicons)
-+ [ ] automatically use Nerd Font in GUI (similar to how ~fira-code-mode~ handles it)
++ [X] use Nerd Font face for the icons in GUI
