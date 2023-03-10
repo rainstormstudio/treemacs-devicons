@@ -29,6 +29,10 @@ You can also download the ~treemacs-devicons.el~ file and load it to the path, t
 #+END_SRC
 
 * Use ~treemacs-devicons~ with ~treemacs-icons-dired~
+With ~treemacs-icons-dired~ installed you will have icons shown in dired out of box on GUI
+
+If you want the icons to show up on dired on terminal you need to modify treemacs-icons-dired a little bit:
+
 Go to ~treemacs-icons-dired.el~ and comment out ~(display-graphic-p)~ inside the function ~treemacs-icons-dired--display()~
 #+BEGIN_SRC elisp
   (defun treemacs-icons-dired--display ()
