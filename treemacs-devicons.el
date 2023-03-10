@@ -38,6 +38,8 @@
 (treemacs-create-theme "devicons"
   :config
   (progn
+    (treemacs-create-icon :icon (propertize " " 'face '(:foreground "#7256a7")) :extensions ("el") :fallback 'same-as-icon)
+    (treemacs-create-icon :icon (propertize " " 'face '(:foreground "#7ba092")) :extensions ("org") :fallback 'same-as-icon)
     (treemacs-create-icon :icon (propertize "ﬥ " 'face '(:foreground "#cbcb41")) :extensions ("babelrc") :fallback 'same-as-icon)
     (treemacs-create-icon :icon (propertize " " 'face '(:foreground "#89e051")) :extensions ("bash_profile") :fallback 'same-as-icon)
     (treemacs-create-icon :icon (propertize " " 'face '(:foreground "#89e051")) :extensions ("bashrc") :fallback 'same-as-icon)
